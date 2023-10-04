@@ -1,19 +1,16 @@
-﻿string name = "Anna";
+﻿string name = "Ewa";
 char sex = 'K';
-var age = 35;
+var age = 33;
 
-if (age > 30 && sex =='K')
+if (age < 33 && sex =='K')
 {
-    if(name == "Anna" && age == 35)
-    {
-        Console.WriteLine("Hello Anna");
-    }
-    else
-    {
-        Console.WriteLine($"You are not Anna age: {age}" );   
-    }
+    Console.WriteLine("Kobieta poniżej 30 lat");
+}
+else if (name == "Ewa" && age == 33 && sex =='K')
+{
+    Console.WriteLine("Ewa, lat 33 ");
 }
 else
 {
-    Console.WriteLine("Hello stranger");
+    Console.WriteLine("Niepełnoletni męższczynza");
 }
