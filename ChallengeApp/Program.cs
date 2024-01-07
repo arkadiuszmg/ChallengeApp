@@ -40,4 +40,4 @@ foreach (Employee employee in employeeList)
     }
 }
 
-Console.WriteLine($"The best worker is: {employeeWithMaxResult.name} {employeeWithMaxResult.surname}");
+Console.WriteLine($"The best worker is: {employeeWithMaxResult.name} {employeeWithMaxResult.surname}. With result: {employeeWithMaxResult.TotalGradesForEmployee}");
