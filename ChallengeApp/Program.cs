@@ -1,19 +1,43 @@
 ﻿using ChallengeApp;
 
-User user1 = new User("Adam", "123qwe");    
-User user2 = new User("Jan", "123qwe");
-User user3 = new User("Barbara", "123qwe");
-User user4 = new User("Katarzyna", "123qwe");
+Employee emp1 = new Employee("Tomasz", "Nowak", 27);
+Employee emp2 = new Employee("Marek", "Kowalski", 33);
+Employee emp3 = new Employee("Łukasz", "Bąk", 30);
 
-user1.AddScore(5);
-user1.AddScore(10);
-user1.AddScore(15);
+emp1.AddGrade(5);
+emp1.AddGrade(7);
+emp1.AddGrade(6);
+emp1.AddGrade(9);
+emp1.AddGrade(6);
 
-var ResultUser1 = user1.Result;
 
-Console.WriteLine(ResultUser1);
-Console.WriteLine(user1.Result);
+emp2.AddGrade(4);
+emp2.AddGrade(2);
+emp2.AddGrade(4);
+emp2.AddGrade(10);
+emp2.AddGrade(7);
 
-var Game = User.GameName;
-Console.WriteLine(Game);
 
+emp3.AddGrade(9);
+emp3.AddGrade(7);
+emp3.AddGrade(6);
+emp3.AddGrade(8);
+emp3.AddGrade(8);
+
+List<Employee> employeeList = new List<Employee>() 
+{
+    emp1, emp2, emp3
+};
+
+int maxGrade = -1;
+Employee employeeWithMaxResult = null;
+
+foreach (Employee employee in employeeList)
+{
+    if (employee.TotalGradesForEmployee > maxGrade)
+    {
+        employeeWithMaxResult = employee;
+    }
+}
+
+Console.WriteLine($"The best worker is: {employeeWithMaxResult.name} {employeeWithMaxResult.surname}");
